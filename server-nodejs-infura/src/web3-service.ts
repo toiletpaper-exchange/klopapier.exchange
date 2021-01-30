@@ -10,6 +10,8 @@ const Web3 = require('web3');
 export class Web3Service implements Web3ServiceInterface {
     private web3;
 
+    private pricesBuffer: any
+
     constructor(infuraProjectId) {
         this.web3 = new Web3(new Web3.providers.HttpProvider(`https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`));
     }
@@ -19,9 +21,9 @@ export class Web3Service implements Web3ServiceInterface {
 
             const result = await this.web3.eth.getBalance(walletId)
             console.log(result)
-            return { "balanceInEther": this.web3.utils.fromWei(await this.web3.eth.getBalance(walletId), 'ether')}
-        } catch(error){
-            return { "balanceInEther": 0}
+            return { "balanceInEther": this.web3.utils.fromWei(await this.web3.eth.getBalance(walletId), 'ether') }
+        } catch (error) {
+            return { "balanceInEther": 0 }
         }
     }
 
@@ -54,9 +56,17 @@ export class Web3Service implements Web3ServiceInterface {
 
     async getPrice(): Promise<any> {
 
-        const result = (await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', { headers: { 'X-CMC_PRO_API_KEY': process.env.COINMARKETCAP_API_KEY } })).data
+        if (this.pricesBuffer === undefined) {
+            console.log('hier')
+            this.pricesBuffer = (await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', { headers: { 'X-CMC_PRO_API_KEY': process.env.COINMARKETCAP_API_KEY } })).data
+            setTimeout(() => {
+                this.pricesBuffer = undefined
+            }, 1000 * 60 * 6)
+        } else {
+            console.log('da')
+        }
 
-        return { coinmarketcapResult: result }
+        return { coinmarketcapResult: this.pricesBuffer }
     }
 
 
