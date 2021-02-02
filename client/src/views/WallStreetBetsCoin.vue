@@ -1,13 +1,14 @@
 <template>
   <div class="wrapper">
     <div class="hero">
-      <div class="text-2xl md:text-5xl lg:text-6xl">WallStreetBetsCoin</div>
+      <div class="text-2xl md:text-5xl lg:text-6xl">Earn Coins</div>
       <div class="mt-6 text-sm md:text-base"></div>
       <!-- <p><br /></p>
       As this is mainly an education project we give them away for free at the moment. You
       only need to pay the transaction fee for the Ethereum Blockchain. -->
 
       <div class="mt-4 text-sm md:text-base">
+        <br />
         In order to receive 100 of our<a
           href="https://etherscan.io/token/0x333ae28e97f9b6536cf02fc76d3108bfe9d775fc"
           target="_blank"
@@ -16,8 +17,27 @@
         >
           WallStreetBetsCoins (WSBC)
         </a>
-        you need to create a 5 - 20 seconds Video of you shouting "Wall Street Bets" out of a
-        window to
+        or 1 of our
+        <a
+          href="https://etherscan.io/token/0xe79ff9299351356e0ff64fd11ca594162cbd189a"
+          target="_blank"
+          class="text-blue-600"
+          rel="noopener noreferrer"
+        >
+          USDWipePaper (UWP)
+        </a>
+        or 1 of our
+        <a
+          href="https://etherscan.io/token/0xcfe63389382412c31d4dfcf60a70fa5a9b90b63f"
+          target="_blank"
+          class="text-blue-600"
+          rel="noopener noreferrer"
+        >
+          EURWipePaper (EWP)
+        </a>
+        you need to create a 5 - 20 seconds video of you shouting either <br />
+        <b> "Wall Street Bets" or "Toiletpaper" or "Klopapier" </b> <br />
+        out of a window to
         <a
           href="https://t.me/wallstreetbetsdevelopers"
           target="_blank"
@@ -30,6 +50,15 @@
         Please make sure to send also your public Ethereum Wallet Address when sending the
         video to the channel.
 
+        <p><br /></p>
+
+        With this video based initial distribution mechanism we would like to foster a reasonable initial distribution of our coins.
+        <p><br /></p>
+        As soon as all of our coins are distributed, we might create a liquidity pool on
+        uniswap. From then on we might be able to trade our coins via uniswap.
+        <p><br /></p>
+        It seems important that the sending addresses always have enough ETH to pay the gas
+        fees. If anyone has ideas on how to ensure this, share it in our telegram channel.
         <!-- <button
           @click="onTestYourSelfClicked()"
           type="button"
@@ -41,12 +70,14 @@
       </div>
     </div>
 
+  <p><br></p>
+  <p><br></p>
     <div id="particles-js" style="height: 500px"></div>
 
     <div class="mx-4 text-sm md:text-base">
-      <div id="readMore" class="mt-12 md:grid grid-cols-3 gap-12">
+      <div id="readMore" class="mt-32 md:grid grid-cols-3 gap-12">
         <div class="mt-4 shadow p-4 rounded">
-          <div class="font-bold text-base">Why?</div>
+          <div class="font-bold text-base">Value Proposition</div>
           You can use the example of the
           <a
             href="https://etherscan.io/token/0x333ae28e97f9b6536cf02fc76d3108bfe9d775fc"
@@ -56,6 +87,7 @@
             >WallStreetBetsCoin</a
           >
           to explore the ERC20 Token Standard in the context of the Ethereum Blockchain.
+          <br />
         </div>
 
         <div class="mt-4 shadow p-4 rounded">
@@ -65,6 +97,8 @@
             <a
               href="https://github.com/michael-spengler/klopapier.exchange/blob/main/server-nodejs-infura/src/smart-contracts/wsbc.sol"
               target="_blank"
+              class="text-blue-600"
+              rel="noopener noreferrer"
             >
               this code </a
             >which we have developed and deployed via the
@@ -83,24 +117,9 @@
         <div class="mt-4 shadow p-4 rounded">
           <div class="font-bold text-base">Outlook</div>
           <div>
-            We might create a liquidity pool on
-            <a
-              href="https://uniswap.org/"
-              target="_blank"
-              class="text-blue-600"
-              rel="noopener noreferrer"
-            >
-              Uniswap
-            </a>
-            for the
-            <a
-              href="https://etherscan.io/token/0x333ae28e97f9b6536cf02fc76d3108bfe9d775fc"
-              target="_blank"
-              class="text-blue-600"
-              rel="noopener noreferrer"
-              >WallStreetBetsCoin</a
-            >
-            soon.
+            We want to inspire people to explore many cool things which we can do by using
+            the Distributed Ledger Technology (DLT). In this respect we might provide more
+            features soon.
           </div>
         </div>
       </div>
@@ -154,7 +173,8 @@ export default defineComponent({
       window.particlesJS("particles-js", {
         particles: {
           number: {
-            value: 100,
+            // value: 100,
+            value: 0, // to calm things on the page - maybe temporarily
             density: {
               enable: true,
               value_area: 700,
@@ -257,6 +277,19 @@ export default defineComponent({
         retina_detect: true,
       });
     });
+
+    const openGithub = () => {
+      window.open("https://github.com/michael-spengler/klopapier.exchange", "_blank");
+    };
+
+    const openTelegram = () => {
+      window.open("https://t.me/wallstreetbetsdevelopers", "_blank");
+    };
+
+    return {
+      openGithub,
+      openTelegram,
+    };
   },
   methods: {
     onReadFirst() {

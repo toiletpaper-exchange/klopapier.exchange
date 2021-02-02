@@ -4,26 +4,9 @@
       <div class="text-2xl md:text-5xl lg:text-6xl">Education</div>
 
       <div class="mt-4 text-sm md:text-base">
-        Explore Crypto Currencies and Decentralized Finance (DeFi).
-      </div>
-
-      <div class="mt-8 sm:flex justify-center">
-        <button
-          type="button"
-          class="mt-2 inline-flex items-center px-4 py-2 mx-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          <span class="material-icons mr-2"> history_edu </span>
-          <a href="#read"> Read about it First </a>
-        </button>
-
-        <button
-          @click="onTestYourSelfClicked()"
-          type="button"
-          class="mt-2 inline-flex items-center px-4 py-2 mx-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          <span class="material-icons mr-2"> history_edu </span>
-          Test Your Knowledge
-        </button>
+      <b>
+        Explore the most frequently used terms used by Decentralized Finance (DeFi) experts.
+      </b>
       </div>
     </div>
 
@@ -182,6 +165,17 @@
         src="./../assets/geiler-vogel.mp4" type=video/mp4>
       </video>
     </div>
+
+    <div class="mt-8 sm:flex justify-center">
+      <button
+        @click="onTestYourSelfClicked()"
+        type="button"
+        class="mt-2 inline-flex items-center px-4 py-2 mx-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      >
+        <!-- <span class="material-icons mr-2"> history_edu </span> -->
+        Test Your Knowledge
+      </button>
+    </div>
   </div>
 </template>
 
@@ -197,7 +191,8 @@ export default defineComponent({
       window.particlesJS("particles-js", {
         particles: {
           number: {
-            value: 100,
+            // value: 100,
+            value: 0, // to calm things on the page - maybe temporarily
             density: {
               enable: true,
               value_area: 700,
@@ -300,6 +295,19 @@ export default defineComponent({
         retina_detect: true,
       });
     });
+
+    const openGithub = () => {
+      window.open("https://github.com/michael-spengler/klopapier.exchange", "_blank");
+    };
+
+    const openTelegram = () => {
+      window.open("https://t.me/wallstreetbetsdevelopers", "_blank");
+    };
+
+    return {
+      openGithub,
+      openTelegram,
+    };
   },
   methods: {
     onReadFirst() {
