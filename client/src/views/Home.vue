@@ -32,46 +32,6 @@
           >Digital Euro WipePaper</a
         >
       </div>
-      <p><br /></p>
-      Inspired by the (temporary?) shutdown of our
-      <a
-        href="https://www.reddit.com/r/wallstreetbets/"
-        target="_blank"
-        class="text-blue-600"
-        rel="noopener noreferrer"
-      >
-        wallstreetbets reddit community</a
-      >
-      this page is also deployed to
-      <a
-        href="ipfs://QmRtZwWHeEpF94ubmZiUJFbNmJUwtBJwkgo5fkPwX2o8mb"
-        target="_blank"
-        class="text-blue-600"
-        rel="noopener noreferrer"
-      >
-        the IPFS
-      </a>
-      and to
-
-      <a
-        href="https://www.arweave.org"
-        target="_blank"
-        class="text-blue-600"
-        rel="noopener noreferrer"
-      >
-        the Arweave
-      </a>
-
-      using
-
-      <a
-        href="https://argoapp.live"
-        target="_blank"
-        class="text-blue-600"
-        rel="noopener noreferrer"
-      >
-        Argo
-      </a>
 
       <div class="mt-8 sm:flex justify-center">
         <!-- <div class="mt-2">
@@ -98,7 +58,7 @@
           <router-link
             type="button"
             class="inline-flex items-center px-4 py-2 mx-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            to="/wallstreetbetsCoins"
+            to="/coins"
           >
             <svg
               class="mr-2"
@@ -133,14 +93,27 @@
         <div class="mt-4 shadow p-4 rounded text-sm sm:text-base">
           <div class="font-bold text-base">The Idea</div>
           With this page we invite you to explore the Distributed Ledger Technology which
-          is the basis for currencies like Ether and Bitcoin. Everyone is invited to
-          contribute to this page by providing
-          <a
-            href="https://github.com/michael-spengler/klopapier.exchange"
-            target="_blank"
-          >
-            content or code for new features.
-          </a>
+          is the basis for currencies like Ether and Bitcoin.
+          Please understand some differences between the
+                  <a
+          class="text-blue-600"
+          href="https://whitepaper.io/document/0/bitcoin-whitepaper"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bitcoin Whitepaper
+        </a>
+        and the
+        <a
+          class="text-blue-600"
+          href="https://duckduckgo.com/?q=us+dollar+toiletpaper&iax=images&ia=images"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          USD WipePaper</a
+        > before you continue.
+
+          
         </div>
 
         <div class="mt-4 shadow p-4 rounded text-sm sm:text-base">
@@ -184,7 +157,7 @@
             <router-link
               type="button"
               class="inline-flex items-center px-4 py-2 mx-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              to="/wallstreetbetsCoins"
+              to="/coins"
             >
               Play It Now</router-link
             >
@@ -282,8 +255,8 @@
               had been showing negative interest rates since about 2015.
 
               <p><br /></p>
-              These are some of the reasons why we support wallstreetbets and the
-              Distributed Ledger Technology etc.
+              These are some of the reasons why we support wallstreetbets, Decentralized
+              Finance, the Distributed Ledger Technology etc.
               <p><br /></p>
               We want to increase freedom for those who increase freedom.
             </div>
@@ -388,6 +361,50 @@
         </div>
       </div>
       <div class="my-32">
+
+      <p><br /></p>
+      Inspired by the (temporary?) shutdown of our
+      <a
+        href="https://www.reddit.com/r/wallstreetbets/"
+        target="_blank"
+        class="text-blue-600"
+        rel="noopener noreferrer"
+      >
+        wallstreetbets reddit community</a
+      >
+      this page is also published to
+      <a
+        href="ipfs://Qmbh7PrpKFFHZKEEZWZ3TxBdnjBWKuhKq4WmVo9wf4B9W3"
+        target="_blank"
+        class="text-blue-600"
+        rel="noopener noreferrer"
+      >
+        the IPFS
+      </a>
+      and to
+
+      <a
+        href="https://www.arweave.org"
+        target="_blank"
+        class="text-blue-600"
+        rel="noopener noreferrer"
+      >
+        the Arweave
+      </a>
+
+      using
+
+      <a
+        href="https://argoapp.live"
+        target="_blank"
+        class="text-blue-600"
+        rel="noopener noreferrer"
+      >
+        Argo
+      </a>
+
+      </div>
+      <div class="my-32">
         <div class="font-bold text-xl">Quotes/Feedback</div>
         <div>"No pressure. Some things just need some time."</div>
         <div>"Habt Ihr in die Hose geschissen?"</div>
@@ -399,7 +416,7 @@
           <div class="mb-2">
             Join us via
             <a
-              href="https://t.me/wallstreetbetsdevelopers"
+              href="https://t.me/decentralizedfinancegroup"
               target="_blank"
               class="text-blue-600"
               rel="noopener noreferrer"
@@ -473,8 +490,8 @@ export default defineComponent({
       window.particlesJS("particles-js", {
         particles: {
           number: {
-            // value: 100,
-            value: 0, // to calm things on the page - maybe temporarily
+            value: 100,
+            // value: 0, // to calm things on the page - maybe temporarily
             density: {
               enable: true,
               value_area: 700,
